@@ -2,12 +2,12 @@
    <div class="w-full">
       <!-- avatar circle -->
       <div class="flex">
-         <div class="cursor-pointer font-bold w-16 h-16 bg-gray-300 flex items-center justify-center rounded-full mr-5">D</div>
+         <app-avatar />
          <!-- form -->
          <div class="flex-1">
 
             <!-- textarea -->
-            <textarea [(ngModel)]="tweetMessage" (input)="changeTweet()" [maxlength]="tweetMaxLegth" class="mb-2 bg-gray-200 focus:outline-none focus:shadow-outline focus:bg-gray-100 border boder-transpoarent rounded-lg py-2 px-4 block w-full appearence-none font-light resize-none placeholder-gray-700" row="3" placeholder="What's happening..."></textarea>
+            <textarea (keyup.enter)="sendTweet()" [(ngModel)]="tweetMessage" (input)="changeTweet()" [maxlength]="tweetMaxLegth" class="mb-2 bg-gray-200 focus:outline-none focus:shadow-outline focus:bg-gray-100 border boder-transpoarent rounded-lg py-2 px-4 block w-full appearence-none font-light resize-none placeholder-gray-700" row="3" placeholder="What's happening..."></textarea>
 
             <!-- divider line -->
             <div class="w-auto border rounded-lg"></div>
